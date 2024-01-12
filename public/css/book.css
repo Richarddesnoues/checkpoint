@@ -16,15 +16,29 @@ main {
     filter: drop-shadow(15px 15px 5px var(--shadow));
 }
 
+.whisky_glasses {
+    width: 300px;
+}
+
+.empty-whisky {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
 .pages {
     display: flex;
     width: auto;
+    height:650px;
     flex-basis : 65%;
     margin:1em;
 }
 
 .page {
-    height:65vh;
+    height:650px;
     padding: 3vw;
     width: 50%;
     background-blend-mode: multiply;
@@ -40,3 +54,16 @@ main {
     border-radius:  40% 24px 24px 40%/8px 8px 8px 8px;
     overflow: auto;
 }
+
+.pen {
+    align-self: self-end;
+}
+
+/* MEDIA QUERYS */
+
+@media all and (max-width: 1200px) {
+    .pen {
+        display: none;
+    }
+      
+    }
