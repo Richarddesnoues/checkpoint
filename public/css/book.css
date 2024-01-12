@@ -32,13 +32,13 @@ main {
 .pages {
     display: flex;
     width: auto;
-    height:650px;
+    height:65vh;
     flex-basis : 65%;
     margin:1em;
 }
 
 .page {
-    height:650px;
+    height:65vh;
     padding: 3vw;
     width: 50%;
     background-blend-mode: multiply;
@@ -62,8 +62,21 @@ main {
 /* MEDIA QUERYS */
 
 @media all and (max-width: 1200px) {
+    .leftpage h1 {
+        display: none;
+    }  
+
     .pen {
         display: none;
+    }
+
+    .pages .page {
+        height: 50vh;
+
+    }
+
+    .pages {
+        margin-right: 70px;
     }
       
     }
