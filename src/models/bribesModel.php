@@ -8,9 +8,8 @@ function createConnection(): PDO
 
 function getAllBribes(): array
 {
-    // Fetching all recipes from database - assuming the database is okay
-$connection = createConnection();
-$statement = $connection->query('SELECT `id`, `name`, `payment` FROM checkpoint1');
+$pdo = createConnection();
+$statement = $pdo->query('SELECT `id`, `name`, `payment` FROM checkpoint1');
 $bribes = $statement->fetchAll(PDO::FETCH_ASSOC);
 return $bribes;
 
@@ -19,8 +18,8 @@ return $bribes;
 function insert(array $bribe): void
 {
     $pdo = createConnection();
-    $sql = " INSERT INTO `bribe` (`name`, `payement`) VALUES (:name, :payment)";
-    $query = $pdo->prepare($sql);
+    $statement = " INSERT INTO `bribe` (`name`, `payement`) VALUES (:name, :payment)";
+    $query = $pdo->prepare($statement);
     $query->bindValue(':name', $bribe['name'], PDO::PARAM_STR );
     $query->bindValue(':payment', $bribe['payment'], PDO::PARAM_STR);
 

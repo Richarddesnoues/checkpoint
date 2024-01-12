@@ -6,7 +6,6 @@ require_once 'book.php';
 
 $errors = [];
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    $bribe = [];
     foreach($_POST as $key => $value) {
         $bribe[$key] = htmlentities(trim((string) $value));
         if(empty($bribe[$key])){
