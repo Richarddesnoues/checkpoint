@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
 
 body {
     background-image: url('../image/background.jpeg');
@@ -88,4 +95,28 @@ main {
     .whisky {
         display: none;
     }
-}   
+}
+
+@media all and (max-width: 1000px) {
+    .whisky_glasses {
+        display: none;
+    }
+
+    .desktop {
+        justify-content: center;
+    }
+
+    .pages .page {
+        height: 63vh;
+
+    }
+
+    .pages {
+        margin-right: 0;
+    }
+
+    .page {
+    width: 500px;
+    }
+    
+}
